@@ -1,8 +1,8 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import Footer from '../components/Footer'
 import Menu from '../components/GroupMenu'
 import Intro from '../components/Intro'
+import Main from '../components/Main'
 
 export default function Home() {
   return (
@@ -13,12 +13,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {/* Menu */}
-      <Menu />
+      <Main />
 
       <Intro />
 
-      <Footer />
     </div>
   )
 }
