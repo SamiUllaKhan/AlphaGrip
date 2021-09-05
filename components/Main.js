@@ -4,7 +4,7 @@ function Main() {
     return (
     <div>
         <div className="md:relative bg-white overflow-hidden ">
-            <div className="mx-auto"> {/* max-w-7xl */}
+            <div className="mx-auto mb-8"> {/* max-w-7xl */}
                 <div className="md:relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
                     <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
                         <div className="sm:text-center lg:text-left">
@@ -26,7 +26,7 @@ threatening, due to slip &amp; fall and ignorance. The victims end up with twist
 damaged limbs, fractures, and many cases head and impact injuries.
                             </p>
                             <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-                                <div className="rounded-md shadow">
+                                {/* <div className="rounded-md shadow">
                                 <a
                                     href="#"
                                     className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
@@ -41,7 +41,7 @@ damaged limbs, fractures, and many cases head and impact injuries.
                                 >
                                     Apply for demo
                                 </a>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     </main>
