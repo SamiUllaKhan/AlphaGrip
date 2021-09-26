@@ -1,9 +1,6 @@
 import Image from "next/image";
+import { BeakerIcon, ClockIcon, CurrencyRupeeIcon, ShieldCheckIcon } from '@heroicons/react/outline'
 import IntroProductImage from '../public/Images/ProductImage.png'
-import Chemistry from '../public/Images/Chemistry.png';
-import Currency from '../public/Images/currency.png';
-import Shield from '../public/Images/Shield.png';
-import Clock from '../public/Images/clock.png';
 
 const features = [
     { name: 'Outcome', description: 'The transformed infinite micro textures, relatively functions as surface roughness that achieve safe slip resistance on dry surface and indicates moderately higher friction value on wet surfaces. Owing to wet floor surface, water fills in uniform matrix, the minute when the surface is walked on, the fluid expels and vacuum is created within the pattern, thus creating traction, an increased Static Coefficient Of Friction (SCOF) which results in safe and slip resistant floor surface.' },{ name: 'Impart', description: 'Alpha Grip virtually invisible floor treatment performed on existing hard floor surfaces, which partially modifies the molecular structure and generates Nano-scale textures on the surface, and in accord to manage the inherent &amp; aesthetic standards of the simulated floor surfaces that to keep gloss, colour, stain resistant, typical water absorption intensity etc.' },
@@ -12,10 +9,10 @@ const features = [
   ]
 
 const featuresIcons = [
-  {name: 'Hazard Free', icon: Chemistry},
-  {name: 'Cost Efficiency', icon: Currency},
-  {name: 'Safe', icon: Shield},
-  {name: 'Long Lasting', icon: Clock},
+  {name: 'Hazard Free', icon: BeakerIcon},
+  {name: 'Cost Efficiency', icon: CurrencyRupeeIcon},
+  {name: 'Safe', icon: ShieldCheckIcon},
+  {name: 'Long Lasting', icon: ClockIcon},
 ]
 function Intro() {
     return (
@@ -35,20 +32,28 @@ function Intro() {
                 </div>
               ))}
             </dl>
-            <div className="mt-16 flex justify-evenly">
+            
+            <div className="mx-auto">
+              <div className="flex flex-wrap">
+
               {featuresIcons.map((featuresIcon) => (
-                <div key={featuresIcon.name} className="group cursor-pointer">
-                  <div className="group-hover:animate-bounce align-text-bottom">
-                    <Image 
-                    className="m-100" 
-                    src={featuresIcon.icon} alt={featuresIcon.name} width="80" height="80" />
-                  </div>
-                  <p 
-                  className="text-center text-lg text-gray-500 group-hover:text-red-400"
-                  >{featuresIcon.name}</p>
-              </div >
-              ))}
-          </div>
+                <div key={featuresIcon.name} className="group cursor-pointer lg:pt-12 pt-6 w-full md:w-3/12 px-4 text-center">
+                    <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg" >
+                      <div className="px-4 py-5 flex-auto">
+                        <div
+                          className="group-hover:animate-bounce text-white p-3 text-center inline-flex items-center justify-center w-20 h-20 mb-5 shadow-lg rounded-full bg-red-400"
+                        >
+                          <featuresIcon.icon />
+                        </div>
+                        <h6 className="text-md font-semibold">{featuresIcon.name}</h6>
+                      </div>
+                    </div>
+                </div>
+                ))}
+
+              </div>
+            </div>
+  
         </div>
         <div className="grid">
           <Image

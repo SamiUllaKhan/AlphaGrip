@@ -6,7 +6,7 @@ const About = () => {
     return ( 
         <>
         <div className="container mx-auto px-2">
-            <div className="flex h-auto">
+            <div className="flex justify-center">
                 <Image className="w-full" src={AxiomLab} alt="AxiomLab"/>
             </div>
             <div className="my-8">

@@ -1,17 +1,9 @@
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import {
-  BookmarkAltIcon,
-  CalendarIcon,
-  ChartBarIcon,
-  CursorClickIcon,
   MailIcon,
   MenuIcon,
   PhoneIcon,
-  RefreshIcon,
-  ShieldCheckIcon,
-  SupportIcon,
-  ViewGridIcon,
   XIcon,
 } from '@heroicons/react/outline'
 import { ChevronDownIcon } from '@heroicons/react/solid'
@@ -53,24 +45,18 @@ const callsToAction = [
   { name: 'Contact Now', href: 'tel:+919845087067', icon: PhoneIcon },
 ]
 const resources = [
-  // {
-  //   name: 'Help Center',
-  //   description: 'Get all of your questions answered in our forums or contact support.',
-  //   href: '#',
-  //   icon: SupportIcon,
-  // },
-  // {
-  //   name: 'Guides',
-  //   description: 'Learn how to maximize our platform to get the most out of it.',
-  //   href: '#',
-  //   icon: BookmarkAltIcon,
-  // },
-  // {
-  //   name: 'Events',
-  //   description: 'See what meet-ups and other events we might be planning near you.',
-  //   href: '#',
-  //   icon: CalendarIcon,
-  // },
+  {
+    name: 'Mail Us',
+    description: 'Mail for any queries regrading our product',
+    href: 'mailto:info@alphagrip.in',
+    icon: MailIcon,
+  },
+  {
+    name: 'Contact Now',
+    description: 'Call Us for any queries regrading our product',
+    href: 'tel:+919845087067',
+    icon: PhoneIcon,
+  },
 ]
 
 
@@ -84,7 +70,7 @@ export default function MenuBar() {
         <Popover className="relative bg-white">
       <div className="px-4 sm:px-6">
         <div className="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
-          <div className="flex justify-start lg:w-0 lg:flex-1">
+          <div className="flex justify-start items-center w-auto">
             <Link href="/">
             <a>
               <span className="sr-only">Workflow</span>
@@ -102,7 +88,7 @@ export default function MenuBar() {
               <MenuIcon className="h-6 w-6" aria-hidden="true" />
             </Popover.Button>
           </div>
-          <Popover.Group as="nav" className="hidden md:flex space-x-10">
+          <Popover.Group as="nav" className="hidden md:flex space-x-10 items-center justify-center w-full h-full py-5 -ml-0">
 
 
             <Link href="/about">
@@ -222,13 +208,11 @@ export default function MenuBar() {
             </div>
             <div className="py-6 px-5 space-y-6">
               <div className="grid grid-cols-2 gap-y-4 gap-x-8">
-                <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
-                  Pricing
-                </a>
-
-                <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
-                  Features
-                </a>
+                <Link href="about">
+                  <a className="text-base font-medium text-gray-900 hover:text-gray-700">
+                    About
+                  </a>
+                </Link>
                 {resources.map((item) => (
                   <a
                     key={item.name}
